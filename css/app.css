@@ -39,7 +39,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .layer-2 {
-    background: #fdec6f;
+    background: #fdac1f;
+}
+.layer-2 * {
+    color: #fff;
 }
 .layer-3 {
     background: #efefef;
