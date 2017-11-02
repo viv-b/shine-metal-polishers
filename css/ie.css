@@ -1,0 +1,150 @@
+/* -------------------------------------------------- 
+IE hacks
+-------------------------------------------------- */
+
+/* The main issue with Foundation 5 is the use of REM units instead of EM.  These are not picked
+up by IE 6,7,8.  There is a polyfill that can be used:
+
+/* Hide images that should only be for IE6.  Could also use the AlphaImageLoader */
+
+.ie-only {
+    display: none;
+}
+.lt-ie10 .ie-only {
+	display: block;
+}
+.lt-ie10 .ie-hide {
+	display: none !important;
+}
+
+/* -------------------------------------------------- 
+Overall Widths
+-------------------------------------------------- */
+
+.lt-ie10 .grid-x {
+    max-width: 700px;
+}
+.lt-ie10 img {
+    max-width: 700px;
+}
+
+/* -------------------------------------------------- 
+Navigation
+-------------------------------------------------- */
+
+.lt-ie10 .top-bar ul li {
+    display: inline-block;
+}
+
+.lt-ie10 .top-bar ul li a {
+    padding: 8px 20px;
+}
+.lt-ie10 .title-bar {
+    display: none;
+}
+.lt-ie10 .navigation-wrapper {
+    position: static;
+}
+.lt-ie10 .top-bar ul {
+    background-color: #9aca3c;
+    width: 100%;
+}
+
+/* -------------------------------------------------- 
+Upgrade Browser Rant
+-------------------------------------------------- */
+
+.lt-ie10 .my-ie-rant {
+  text-align: center;
+  background: #111;
+}
+.lt-ie10 .my-ie-rant p{
+  margin: 0;
+  padding :0.4em 0;
+  color: #fff;
+}
+.lt-ie10 .my-ie-rant a{
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------- 
+Homepage Specific
+-------------------------------------------------- */
+
+.lt-ie10 .home .first-section {
+    padding-top: 0;
+}
+
+/* -------------------------------------------------- 
+Callouts
+-------------------------------------------------- */
+
+.lt-ie10 .callout {
+  padding: 10px;
+}
+
+/* -------------------------------------------------- 
+Paragraph
+-------------------------------------------------- */
+
+.lt-ie10 p {
+  margin-bottom: 1em;
+}
+
+/* -------------------------------------------------- 
+Images
+-------------------------------------------------- */
+
+.lt-ie10 p img {
+  margin-bottom: 1em;
+}
+
+/* -------------------------------------------------- 
+Overflow (particulary images)
+-------------------------------------------------- */
+
+.lt-ie10 div {
+	overflow: hidden;
+}
+
+/* -------------------------------------------------- 
+Button styles
+-------------------------------------------------- */
+
+.lt-ie10 button,
+.lt-ie10 a.button,
+.lt-ie10 p a.button {
+}
+
+/* -------------------------------------------------- 
+Forms
+-------------------------------------------------- */
+
+.lt-ie10 input {
+  margin: 0 0 0.4em 0;
+  padding: 0.5em;
+  height: auto;
+  color: #333;
+}
+.lt-ie10 textarea {
+  margin: 0 0 0.4em 0;
+}
+
+
+/* IE9 does support media queries, so override a couple of things for IE9 here */
+
+@media screen and (min-width: 40em) { /* 640 pixels - MEDIUM */
+   
+   /* -------------------------------------------------- 
+Overall Widths
+-------------------------------------------------- */
+
+    .lt-ie10 .grid-x {
+        max-width: none;
+    }
+    .lt-ie10 img {
+        max-width: none;
+    }
+   
+}

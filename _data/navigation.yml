@@ -1,0 +1,16 @@
+links:
+  - name: Home
+    link: /
+    pages_collection:
+  - name: About
+    link: /about/
+    pages_collection:
+  - name: Pest Control
+    link: /pest-control/
+    pages_collection:
+  - name: House Wash, Roof &amp; Pests
+    link: /house-wash-roof-pest-control/
+    pages_collection:
+  - name: Contact
+    link: /contact/
+    pages_collection:

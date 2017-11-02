@@ -1,0 +1,23 @@
+@media print {
+  
+  a:link:after, a:visited:after { 
+    content:""; 
+  }
+  img {
+    max-width: 100% !important;
+  }
+  
+  .bgd-image {
+    padding: 80px 0 80px 0;
+    background-image: none !important;
+  }
+  iframe {
+      display: none;
+  }
+  
+  /* This wrapper gets added to the slider via JS. */
+  .forcefullwidth_wrapper_tp_banner {
+      display: none;
+  }
+
+}

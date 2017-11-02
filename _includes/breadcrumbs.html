@@ -1,0 +1,20 @@
+<div class="my-breadcrumbs">
+
+    <!-- Check that this is not the top-level page for the section. If it is, the section_id
+    with the additin of '/' at start and finish would be the same as the page.url. If so
+    don't show the breadcrumb link back to the top level page -->
+    {% capture section_url %}{{ page._section_id | append: '/' | prepend: '/' }}{% endcapture %}
+    
+    {% if page.url contains "/category/" %}
+    
+     <a style="text-decoration: underline;" href="{{ site.baseurl }}/blog/">Blog</a> &raquo; {% if page.heading %}<span>{{ page.heading }}</span>{% elsif page.title %}<span>{{ page.title }}</span>{% endif %}
+            
+    {% elsif section_url != page.url %}
+                
+        {% assign words = page._section_id | split: '-' %}
+                
+        <a style="text-decoration: underline;" href="{{ site.baseurl }}/{{ page._section_id }}/">{% for word in words %}{{ word | capitalize }}{% endfor %}</a> &raquo; {% if page.heading %}<span>{{ page.heading }}</span>{% elsif page.title %}<span>{{ page.title }}</span>{% endif %}
+            
+    {% endif %}
+
+</div>

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Page Not Found
+heading: 'Oops, that''s a 404 Error!'
+description:
+background_1_image: /uploads/images-general/sad-smiley.jpg
+background_1_image_position: center center
+---
+
+<section class="vb-half-and-half">
+    
+    <div class="grid-x grid-padding-x">
+      
+        <div class="medium-7 large-6 cell">
+               
+            <div class="vb-half-text-left">
+                    
+                <h1>OOPS!</h1>
+                <p>Sorry, can't find that page....<br>
+
+            </div>
+               
+        </div>
+      
+        <div class="medium-5 large-6 cell bgd-image" style="background-image: url({{ site.baseurl }}{{ page.background_1_image }}); {% if page.background_1_image_position %}background-position: {{ page.background_1_image_position }};{% endif %}">
+            <!-- -->
+        </div>
+    
+    </div>
+    
+    <div class="show-for-small-only">
+        <img src="{{ site.baseurl }}{{ page.background_1_image }}" alt="" />
+    </div>
+  
+</section>

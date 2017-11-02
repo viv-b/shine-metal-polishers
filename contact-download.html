@@ -1,0 +1,64 @@
+---
+layout: default
+title: Download Information Pack
+heading:
+description:
+background_1_image: /uploads/images-general/house-long-cleaning.jpg
+background_1_image_position: left bottom
+---
+
+<section class="vb-half-and-half">
+    
+    <div class="grid-x grid-padding-x">
+      
+        <div class="medium-7 large-6 cell">
+               
+            <div class="vb-half-text-left">
+                    
+                <h1>Franchise Information Pack</h1>
+                    
+                <p>Find out more about becoming a franchisee with the YourLocal Group.</p>
+                <p>Enter your details below (your details will not be shared with anyone else) and receive the link to download our Franchise Information Pack.</p>
+                        
+                <form method="post" action="/contact-download-success/" id="download-form">
+                        
+                    <label>Your Name (required)</label>
+                    <input required type="text" name="name" />
+                        
+                    <label>Your Email (required)</label>
+                    <input required type="text" name="email" />
+                        
+                    <label>Phone (required)</label>
+                    <input required type="text" name="phone" />
+                        
+                    <label>Mobile</label>
+                    <input type="text" name="mobile" />
+                        
+                    <label>What area of NZ are you in? (required)</label>
+                    <input required type="text" name="location" />
+                        
+                    <input type="hidden" name="_to" value="dave@yourlocal.nz,viv@lumina.net.nz" />
+                    <!-- <input type="hidden" name="_cc" value="" /> -->
+                    <input type="text" name="_gotcha" style="display: none;" />
+                        
+                    <div class="g-recaptcha" data-sitekey="6Lem2TYUAAAAAE2RY4TGYP1qlE_3YGdS856jmV8I"></div>
+                        
+                    <input type="submit" class="button" value="Send" />
+                        
+                </form>
+
+            </div>
+               
+        </div>
+      
+        <div class="medium-5 large-6 cell bgd-image" style="background-image: url({{ site.baseurl }}{{ page.background_1_image }}); {% if page.background_1_image_position %}background-position: {{ page.background_1_image_position }};{% endif %}">
+            <img class="show-for-print" src="{{ site.baseurl }}{{ page.background_1_image }}" alt="{{ page.title }}" />
+        </div>
+    
+    </div>
+        
+    <div class="show-for-small-only hide-for-print">
+        <img src="{{ site.baseurl }}{{ page.background_1_image }}" alt="" />
+    </div>
+  
+</section>

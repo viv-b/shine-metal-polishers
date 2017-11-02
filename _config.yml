@@ -1,0 +1,49 @@
+title: YourLocal Group
+url: "http://www.yourlocalgroup.nz"
+baseurl:
+
+kramdown:
+  auto_ids: false
+  
+social:
+  facebook_app_id:
+  default_image: '/images/fb-sharing-image.jpg'
+
+collections:
+  services:
+    output: true
+    permalink: /:name/
+    
+paginate: 24
+paginate_path: '/blog/:num/'
+permalink: '/:year/:month/:day/:title/'
+
+jekyll-archives:
+  enabled:
+    - "categories"
+    
+gems:
+  - "jekyll-paginate"
+  - "jekyll-archives"
+  
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+      type: "pages"
+    values:
+      layout: "default"

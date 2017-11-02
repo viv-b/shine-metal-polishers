@@ -1,0 +1,87 @@
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="responsive-menu">
+  <div class="top-bar-left">
+    
+    <ul class="vertical large-horizontal menu" data-responsive-menu="drilldown medium-accordion large-dropdown">
+      
+        <li class="menu-text"><img id="logo" src="{{ site.baseurl }}/images/logo.png" alt="{{ site.title }}" /></li>
+      
+      <!-- Iterate over all of the links in the data file (yml) -->
+        {% for link in site.data.navigation.links %}
+        
+                <!-- Get the name of the collection that contains the pages for this top level link -->
+                {% capture label %}{{ link.pages_collection }}{% endcapture %}
+                
+                {% assign class = "" %}
+    
+                {% if link.link == page.url %}
+                    {% assign class = class | append: " active" %}
+                {% endif %}
+              
+                <!-- CHILDREN ?  -->
+                
+                <!-- Check if a value was returned. If not then assume page has no children -->
+                {% if label != "" and label != nil %}
+                
+                    <!-- convert label into url fragment -->
+                    {% capture fragment %}/{{ label }}/{% endcapture %}
+                    <!-- check if the url fragment makes up part of the URL. -->
+                    {% if page.url contains fragment %}
+                        {% assign class = class | append: " active" %}
+                    {% endif %}
+                   
+                    <li class="has-submenu {{ class }}">
+                        
+                        <a href="{{ site.baseurl }}{{ link.link }}">{{ link.name }}</a>
+                   
+                        <ul class="submenu menu vertical" data-submenu>
+                        
+                            {% assign sorted_items = site.[label] | sort: 'sort_number' %}
+                         
+                            {% for item in sorted_items %}
+                        
+                            <!-- See if this is the active link -->
+                            {% assign subclass = "" %}
+    
+                            {% if item.url == page.url %}
+                                {% assign subclass = subclass | append: " active" %}
+                            {% endif %}
+              
+                            <li class="{{ subclass }}">
+                                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                            </li>
+                        
+                            {% endfor %}
+                     
+                        </ul>
+                
+                    </li>
+                
+                {% else %}
+                
+                    <!-- NO CHILDREN -->
+                
+                    <li class="{{ class }}">
+                        <a href="{{ site.baseurl }}{{ link.link }}">{{ link.name }}</a>
+                    </li>
+                
+    			{% endif %}
+          
+            {% endfor %}
+    
+        </ul>
+    
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <!-- SEARCH
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li> -->
+      {% if site.data.contact.facebook %}<li><a href="{{ site.data.contact.facebook }}"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>{% endif %}
+    </ul>
+  </div>
+</div>

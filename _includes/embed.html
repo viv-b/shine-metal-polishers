@@ -1,0 +1,41 @@
+{% if page.embed_one.code_block %}
+  
+  <!-- Check if embed ratio is set -->
+  {% if page.embed_one.aspect_ratio %}
+    
+    <!-- ratio is set so apply the responsive embedding -->
+    <div class="responsive-embed {% if page.embed_one.aspect_ratio != nil and page.embed_one.aspect_ratio != '' %}{{ page.embed_one.aspect_ratio }}{% endif %}">
+        {{ page.embed_one.code_block }}
+    </div>
+    
+  {% else %}
+    
+    <!-- Leave out the responsive embedding wrapper -->
+    <div class="full-height-embed text-center">
+      {{ page.embed_one.code_block }}
+    </div>
+    
+  {% endif %}
+
+{% endif %}
+
+{% if page.embed_two.code_block %}
+
+   <!-- Check if embed ratio is set -->
+  {% if page.embed_two.aspect_ratio %}
+    
+    <!-- ratio is set so apply the responsive embedding -->
+    <div class="responsive-embed {% if page.embed_two.aspect_ratio != nil and page.embed_two.aspect_ratio != '' %}{{ page.embed_two.aspect_ratio }}{% endif %}">
+        {{ page.embed_two.code_block }}
+    </div>
+    
+  {% else %}
+    
+    <!-- Leave out the responsive embedding wrapper -->
+    <div class="full-height-embed text-center">
+      {{ page.embed_two.code_block }}
+    </div>
+    
+  {% endif %}
+
+{% endif %}
