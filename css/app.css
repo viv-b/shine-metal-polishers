@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
 .layer-4,
 .layer-5,
 .layer-6 {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 .layer-2 {
@@ -44,6 +44,16 @@ h1,h2,h3,h4,h5,h6 {
 .layer-3 {
     background: #ccc;
 }
+.layer-5 {
+    background: #ccc;
+}
+.layer-6 {
+    background: #111;
+}
+.layer-6 * {
+    color: #fff;
+}
+
 
 
 
