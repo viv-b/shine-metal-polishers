@@ -26,6 +26,14 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Oswald', sans-serif;
   font-family: 'Racing Sans One', sans-serif;
 }
+
+blockquote, blockquote p {
+    color: #777;
+}
+blockquote {
+    border-left: 3px solid #cacaca;
+}
+
 .callout {
     border: 0;
 }
