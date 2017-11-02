@@ -30,6 +30,11 @@ h1,h2,h3,h4,h5,h6 {
     border: 0;
 }
 
+.masthead {
+    background: #eee url('../images/chrome-bgd.gif') no-repeat center center;
+    background-size: 100%;
+}
+
 .layer-1,
 .layer-2,
 .layer-3,
