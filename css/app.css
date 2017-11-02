@@ -29,6 +29,15 @@ h1,h2,h3,h4,h5,h6 {
     border: 0;
 }
 
+.layer-1,
+.layer-2,
+.layer-3,
+.layer-4,
+.layer-5,
+.layer-6 {
+    padding: 60px 0;
+}
+
 /* From: https://www.tjvantoll.com/2013/09/12/building-custom-text-strikethroughs-with-css/ */
 
 .cross {
