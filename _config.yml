@@ -1,5 +1,5 @@
-title: YourLocal Group
-url: "http://www.yourlocalgroup.nz"
+title: Shine Metal Polishers
+url: "http://wanted-ibex.cloudvent.net/"
 baseurl:
 
 kramdown:
@@ -29,11 +29,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "default"
   - scope:
       path: ""
       type: "pages"
