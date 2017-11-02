@@ -10,9 +10,6 @@ social:
   default_image: '/images/fb-sharing-image.jpg'
 
 collections:
-  services:
-    output: true
-    permalink: /:name/
     
 paginate: 24
 paginate_path: '/blog/:num/'
