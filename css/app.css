@@ -38,6 +38,14 @@ h1,h2,h3,h4,h5,h6 {
     padding: 60px 0;
 }
 
+.layer-2 {
+    background: #eee;
+}
+.layer-3 {
+    background: #ccc;
+}
+
+
 
 /* Responsive images */
 
