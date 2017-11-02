@@ -1,0 +1,40 @@
+
+<!-- <div class="grid-x grid-padding-x">
+    <div class="cell">
+        <p class="clickInfo">Click photo to enlarge:</p>
+    </div>
+</div> -->
+
+<div class="grid-x grid-padding-x grid-padding-y small-up-2 medium-up-4 large-up-6 xlarge-up-8 lightbox">
+
+    {% for image in page.images %}
+    
+        <!-- Avoid throwing error if no image path specified on this item-->
+        {% if image.image_path %}
+    
+            <div class="cell">
+                <div class="box">
+                    <div class="content">
+	      
+                        {% capture path %}{{ image.image_path }}{% endcapture %}
+                        
+                        {% capture alt %}{{ page.title }}{% endcapture %}
+         
+                        <!-- NOTE: Need to strip off the leading '/' for the path to work -->
+                        <!-- SEE: https://github.com/wildlyinaccurate/jekyll-responsive-image/issues/25 -->
+                        {% responsive_image_block %}
+                            template: _includes/responsive-image-gallery.html
+                            path: {{ path | replace: '/uploads', 'uploads' }}
+                            alt: {{ alt }}
+                            title: {{ alt }}
+                        {% endresponsive_image_block %}
+                
+                    </div>
+                </div>
+            </div>
+    
+        {% endif %}
+	  
+    {% endfor %}
+
+</div>
