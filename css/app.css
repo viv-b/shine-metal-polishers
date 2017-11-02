@@ -38,95 +38,6 @@ h1,h2,h3,h4,h5,h6 {
     padding: 60px 0;
 }
 
-/* From: https://www.tjvantoll.com/2013/09/12/building-custom-text-strikethroughs-with-css/ */
-
-.cross {
-    position: relative;
-    display: inline-block;
-}
-.cross::before, .cross::after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: 50%;
-}
-.cross::before {
-    border-bottom: 2px solid red;
-    -webkit-transform: skewY(-10deg);
-    transform: skewY(-10deg);
-}
-.cross::after {
-    border-bottom: 2px solid red;
-    -webkit-transform: skewY(10deg);
-    transform: skewY(10deg);
-}
-
-.footer p {
-    margin-bottom: 0;
-}
-
-
-
-/* HOME SECTIONS */
-
-.service-summary {
-    background: #efefef;
-    padding: 90px 0;
-}
-
-
-/* Some extra padding for rows to get content away from edge of screen when smaller views */
-.wrapper-padding {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* GENERIC SECTIONS */
-
-/* SECTION COLOURS */
-.theme-color {
-    background: #9aca3c;
-}
-.theme-color * {
-    color: #fff;
-}
-.dark {
-    background: #333;
-}
-.dark * {
-    color: #fff;
-}
-.light {
-    background: #efefef;
-}
-.black {
-    background: #000;
-}
-.black * {
-    color: #fff;
-}
-
- /* GENERIC SECTIONS */
-
-.vb-half-and-half {
-}
-.vb-half-text-left {
-    padding: 80px 10% 80px 10%;
-}
-.vb-half-text-right {
-    padding: 80px 10% 80px 10%;
-}
-.vb-single-column {
-    padding: 80px 0;
-}
-.vb-single-column .grid-container {
-}
-.bgd-image {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
 
 /* Responsive images */
 
@@ -145,23 +56,6 @@ h1,h2,h3,h4,h5,h6 {
     -moz-object-fit: cover;
     -ms-object-fit: cover;
     -o-object-fit: cover;
-}
-
-/* HOME */
-
-.home .first-section {
-    /* Push the div off the visible screen while the revolution slider is setting itself up. Otherwise, until the slider
-    has a height, this div content will appear at the top of the screen.  Need a slight delay added as well to avoid it happening
-    before the slider starts it's thing */
-    padding-top: 2000px;
-    transition-delay: 1s;
-     -moz-transition-duration: 0.2s;
-    -o-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-}
-.home .first-section.shrink {
-    padding-top: 0px;
 }
 
 /* -------- */
@@ -197,96 +91,14 @@ iframe {
     margin-top: 2rem;
 }
 
-/* ------ */
-/* FOOTER
-/* ------ */
-
-.footer {
-    padding: 30px;
-}
-
 @media screen and (min-width: 40em) {
     
-    /* GENERIC SECTIONS */
-
-    .vb-half-and-half {
-    }
-    .vb-half-text-left {
-        padding: 90px 10% 90px 10%;
-        min-height: 500px;
-    }
-    .vb-half-text-right {
-        padding: 90px 10% 90px 10%;
-        min-height: 500px;
-    }
-    .vb-single-column {
-        padding: 90px 0;
-    }
-    .vb-single-column .grid-container {
-        max-width: 1000px;
-    }
-    .bgd-image {
-    }
-   
 }
 
 @media screen and (min-width: 64em) {
-    
-    .content-wrapper {
-        /* Need to set a background colour otherwise on home page get weird border with shadow showing up on scroll (at bottom of page) */
-        /* Comes from revolution slider */
-        padding-top: 88px;
-        background: #fff;
-    }
-    .content-wrapper .grid-container {
-        max-width: 1000px;
-    }
-    .content-wrapper .grid-container.wide{
-        max-width: 75rem;
-    }
-    
-    /* GENERIC SECTIONS */
-
-    .vb-half-and-half {
-    }
-    .vb-half-text-left {
-        padding: 90px 10% 90px 25%;
-    }
-    .vb-half-text-right {
-        padding: 90px 25% 90px 10%;
-    }
-    .vb-single-column {
-    }
-    .vb-single-column .grid-container {
-    }
-    .bgd-image {
-    }
    
 }
 
 @media screen and (min-width: 75em) {
     
-    .content-wrapper {
-        padding-top: 108px;
-    }
-    .wrapper-padding {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    
-     /* GENERIC SECTIONS */
-
-    .vb-half-and-half {
-    }
-    .vb-half-text-left {
-    }
-    .vb-half-text-right {
-    }
-    .vb-single-column {
-    }
-    .vb-single-column .grid-container {
-    }
-    .bgd-image {
-    }
-   
 }
