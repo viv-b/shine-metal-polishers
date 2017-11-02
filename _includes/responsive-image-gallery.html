@@ -1,0 +1,20 @@
+ {% if resized.size > 0 %}
+ 
+    {% for i in resized %}
+  
+        {% if forloop.first == true %}
+            <a href="/{{ i.path }}" title="{{ alt }}" data-imagelightbox="f">
+        {% endif %}  
+     
+        {% if forloop.last == true %}
+            <img src="/{{ i.path }}" alt="{{ alt }}" title="{{ alt }}" />
+            </a>
+        {% endif %}
+    
+    {% endfor %}
+ 
+ {% else %}
+   
+     <h5 class="text-center" style="padding: 10px; background: #ccc;">Sorry, this image is too small.<br />Minimum width is 481 pixels.</h5>
+ 
+ {% endif %}
