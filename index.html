@@ -1,13 +1,5 @@
 ---
-title: Trusted Home Services Franchise
-heading:
-meta_title: 'Home Services Franchise, Pest Control & House Wash'
-description: >-
-  We are a New Zealand owned Franchise and our team of Kiwi’s are hard-working
-  with a common goal—to become a household name throughout New Zealand when it
-  comes to home maintenance.
-background_1_image: /uploads/images-general/dave-cleaning-tiles.jpg
-background_1_image_position: right top
+title: Shine Metal Polishers
 ---
 
 <section class="vb-half-and-half first-section">
@@ -24,86 +16,14 @@ background_1_image_position: right top
                
         </div>
       
-        <div class="medium-5 large-6 cell bgd-image" style="background-image: url({{ site.baseurl }}{{ page.background_1_image }}); {% if page.background_1_image_position %}background-position: {{ page.background_1_image_position }};{% endif %}">
-            <img class="show-for-print" src="{{ site.baseurl }}{{ page.background_1_image }}" alt="{{ page.title }}" />
+        <div class="medium-5 large-6 cell">
+            
         </div>
     
     </div>
     
     <div class="show-for-small-only hide-for-print">
-        <img src="{{ site.baseurl }}{{ page.background_1_image }}" alt="" />
-    </div>
-  
-</section>
-
-<section class="vb-single-column theme-color">
-    
-    <div class="grid-container">
-        
-         <div class="grid-x grid-padding-x">
-            
-            <div class="cell">
-            
-                <div class="editable"><h2 class="text-center">Can you say YES to the following?</h2><p class="lead text-center">You want to get into your own business.<br />You're motivated to be the driving force of the business.<br />You want an opportunity to earn $100 per hour.</p><p class="lead text-center"><strong>Did you answer YES to those questions?</strong><br />If so, this might be the opportunity for you...</p></div>
-                
-            </div>
-            
-        </div>
         
     </div>
   
-</section>
-
-<section class="vb-single-column dark">
-    
-    <div class="grid-container">
-        
-        <div class="grid-x grid-padding-x">
-            
-            <div class="cell">
-        
-                <div class="responsive-embed widescreen">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rz9LzMYya-w?rel=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-            
-            </div>
-        
-        </div>
-        
-    </div>
-  
-</section>
-
-
-<section class="service-summary">
-    
-    <div class="grid-container wide">
-        
-        <div class="grid-x grid-padding-x">
-            
-            <div class="cell">
-                <h2 class="editable">Our Franchise Opportunities</h2>
-            </div>
-            
-        </div>
-    
-        <div class="grid-x grid-padding-x small-up-1 medium-up-2">
-        
-            {% assign sorted_services = site.services | sort: "sort_number" %}
-        
-            {% for service in sorted_services %}
-            <div class="cell" style="display: flex;">
-                <div class="callout">
-                    <p><img src="{{ site.baseurl }}{{ service.summary_image }}" alt="{{ service.title }}" /></p>
-                    <h3>{{ service.title }}</h3>
-                    {{ service.summary_html }}
-                    <p><a class="button" href="{{ site.baseurl }}{{ service.url }}">Read More</a></p>
-                </div>
-            </div>
-            {% endfor %}
-        
-        </div>
-    
-    </div>
-
 </section>
