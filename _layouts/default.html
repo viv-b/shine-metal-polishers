@@ -11,17 +11,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="generator" content="Jekyll v{{ jekyll.version }}" />
 	
-	{% include seo.html %}
-	
 	<link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.title }}" />
 	
 	<!-- below is from: http://realfavicongenerator.net/ -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
     <!-- end favicon -->
 
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/foundation.css" />
@@ -42,51 +34,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 	
-	{% if page.url == "/" %}
-	<!-- Slider Revolution CSS Files -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/revolution/css/settings.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/revolution/css/layers.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/revolution/css/navigation.css" />
-   
-    <!-- Slider Revolution CSS Files (Vivs Extra)-->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/slider.css" />
-    {% endif %}
-	
 	<!--[if gt IE 9]><!--> 
 	<!-- Core jQuery Script -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
     <!--<![endif]-->
-    
-    {% if page.url == "/" %}
-    <!--[if gt IE 9]><!--> 
-    <!-- Slider Revolution core JavaScript files -->
-    <script type="text/javascript" src="{{ site.baseurl }}/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="{{ site.baseurl }}/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <!--<![endif]-->
-    {% endif %}
-    
-    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 	{% if jekyll.environment == 'production' %}
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109126765-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-109126765-1');
+    <script></script>
     </script>
     {% endif %}
 
 </head>
-	<body class="{% if page.url == '/' %}home{% elsif page.url contains 'contact' %}contact{% endif %}">
+	<body>
 	    
 	    <div class="main-wrapper">
-	   
-    	   <section class="navigation-wrapper hide-for-print">
-    		    {% include navigation.html %}
-    		</section>
     		
     		<!--[if lt IE 10]>
             <div class="my-ie-rant hide-for-print">
@@ -96,16 +57,8 @@
             <![endif]-->
     		 
     		<section class="content-wrapper">
-    		    {% if page.url == "/" %}
-    		     {% include slider.html %}
-                {% endif %}
-    		   
     		    {{ content }}
     		</section>
-    		
-    		{% include call-to-action.html %}
-    		
-    		{% include footer.html %}
 		
         </div>
 		
@@ -121,9 +74,6 @@
 		<!-- Only using Modernizer here because it helps with EDGE to apply the objectFit polyfill. -->
 		<!-- See here: http://foundation.zurb.com/forum/posts/18098-does-modernizr-need-to-be-in-the-head.  -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!-- Go to www.addthis.com/dashboard to customize your tools -->
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-596d7dc304cd15ca"></script>
 		
 	</body>
 </html>
