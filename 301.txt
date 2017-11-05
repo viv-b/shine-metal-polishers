@@ -1,1 +1,9 @@
 /terms.html /
+/services.html /
+/automotive.html /
+/marine.html /
+/about-us.html /
+/faq-s.html /
+/contact-us.html /
+/homeware-collectables.html /
+/industrial-commercial.html /
