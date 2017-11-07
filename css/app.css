@@ -48,7 +48,7 @@ blockquote {
 
 .masthead {
     background: #eee url('../images/chrome-bgd.jpg') no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     padding: 20px 0;
 }
 
@@ -138,6 +138,10 @@ iframe {
 }
 
 @media screen and (min-width: 40em) {
+    
+    .masthead {
+        background-size: 100%;
+    }
     
 }
 
